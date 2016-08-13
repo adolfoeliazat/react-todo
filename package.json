@@ -1,0 +1,34 @@
+{
+  "name": "react-heroku-todo",
+  "version": "1.0.0",
+  "description": "Simple to-do app using React powered by Google Spreadsheets.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "lodash": "^4.14.2",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "react-router": "^2.6.1",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reg Reyes",
+  "license": "ISC"
+}
