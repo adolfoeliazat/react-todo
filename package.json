@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Simple to-do app using React powered by Google Spreadsheets.",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "webpack -p --config webpack.prod.config.js"
+  },
   "dependencies": {
     "express": "^4.14.0",
     "lodash": "^4.14.2",
