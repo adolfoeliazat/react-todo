@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bb6957f3ad0f7a7a0dea"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f292e09f6e53f32e1d3f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -6095,7 +6095,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  background-color: #34495e;\n  font-family: 'Roboto', sans-serif;\n  font-size: 20px;\n  min-height: 100%;\n  padding-bottom: 50px; }\n\na {\n  color: #db3498; }\n\nh1, h2 {\n  font-family: 'Roboto Slab', serif; }\n\n.container {\n  height: 100%; }\n\n.titleDiv {\n  background-color: #ecf0f1;\n  padding: 2% 10% 3% 10%;\n  border-radius: 0 0 10px 10px; }\n\n.todoDiv {\n  margin: 0 auto;\n  margin-top: 5%;\n  width: 600px; }\n\n.inputText {\n  width: 500px !important;\n  margin-left: 15px;\n  font-size: 20px;\n  padding: 0px;\n  padding-left: 10px;\n  border-radius: 0px;\n  margin-top: -3px; }\n\n.btnSave {\n  background: none;\n  border: 0;\n  margin-left: 20px;\n  padding: 0;\n  margin-top: 5px;\n  color: #1abc9c; }\n\n.todoAppTitle {\n  background-color: #1abc9c;\n  border-radius: 10px 10px 0 0;\n  padding: 10px;\n  text-align: center;\n  color: #34495e; }\n\n.todoAppTask {\n  background-color: #ecf0f1;\n  padding: 20px;\n  border-bottom: 1px solid #e0e0e0;\n  position: relative;\n  color: #666666; }\n\n.actions {\n  position: absolute;\n  right: 0;\n  height: 100%;\n  margin-top: -20px;\n  border-left: 1px solid #e0e0e0;\n  width: 100px; }\n\n.check {\n  position: absolute;\n  left: 0;\n  height: 100%;\n  margin-top: -20px;\n  width: 80px;\n  border-right: 1px solid #e0e0e0;\n  padding-top: 20px;\n  color: #3498db; }\n\n.btnAction {\n  color: #bcbcbc;\n  margin-top: 23px;\n  margin-left: 6px;\n  margin-right: 6px;\n  padding: 0;\n  background: none;\n  border: 0; }\n\n.taskText {\n  padding-left: 80px; }\n\n.taskCompleted {\n  color: #bcbcbc; }\n", ""]);
+	exports.push([module.id, "html, body {\n  background-color: #34495e;\n  font-family: 'Roboto', sans-serif;\n  font-size: 20px;\n  min-height: 100%;\n  padding-bottom: 50px; }\n\na, h1 {\n  color: #db6969; }\n\nh1, h2 {\n  font-family: 'Roboto Slab', serif; }\n\n.container {\n  height: 100%; }\n\n.titleDiv {\n  background-color: #ecf0f1;\n  padding: 2% 10% 3% 10%;\n  border-radius: 0 0 10px 10px; }\n\n.todoDiv {\n  margin: 0 auto;\n  margin-top: 5%;\n  width: 600px; }\n\n.inputText {\n  width: 500px !important;\n  margin-left: 15px;\n  font-size: 20px;\n  padding: 0px;\n  padding-left: 10px;\n  border-radius: 0px;\n  margin-top: -3px; }\n\n.btnSave {\n  background: none;\n  border: 0;\n  margin-left: 20px;\n  padding: 0;\n  margin-top: 5px;\n  color: #1abc9c; }\n\n.todoAppTitle {\n  background-color: #1abc9c;\n  border-radius: 10px 10px 0 0;\n  padding: 10px;\n  text-align: center;\n  color: #34495e; }\n\n.todoAppTask {\n  background-color: #ecf0f1;\n  padding: 20px;\n  border-bottom: 1px solid #e0e0e0;\n  position: relative;\n  color: #666666; }\n\n.actions {\n  position: absolute;\n  right: 0;\n  height: 100%;\n  margin-top: -20px;\n  border-left: 1px solid #e0e0e0;\n  width: 100px; }\n\n.check {\n  position: absolute;\n  left: 0;\n  height: 100%;\n  margin-top: -20px;\n  width: 80px;\n  border-right: 1px solid #e0e0e0;\n  padding-top: 20px;\n  color: #3498db; }\n\n.btnAction {\n  color: #bcbcbc;\n  margin-top: 23px;\n  margin-left: 6px;\n  margin-right: 6px;\n  padding: 0;\n  background: none;\n  border: 0; }\n\n.taskText {\n  padding-left: 80px; }\n\n.btnColorSave {\n  color: #3498db; }\n\n.btnColorCancel {\n  color: #db6969; }\n\n.txtEdit {\n  width: 380px;\n  font-size: 20px;\n  padding: 0px;\n  padding-left: 10px;\n  border-radius: 0px;\n  margin-top: -3px; }\n", ""]);
 
 	// exports
 
@@ -14827,7 +14827,7 @@
 /* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
@@ -14886,52 +14886,66 @@
 	    }
 
 	    _createClass(TodosListItem, [{
-	        key: 'renderTaskSection',
-	        value: function renderTaskSection() {
+	        key: "renderCheckedSection",
+	        value: function renderCheckedSection() {
 	            var _props = this.props;
 	            var task = _props.task;
 	            var isCompleted = _props.isCompleted;
 
+	            if (isCompleted) {
+	                return _react2.default.createElement("span", { className: "glyphicon glyphicon-ok checkIcon", "aria-hidden": "true" });
+	            }
+
+	            return _react2.default.createElement("span", { className: "glyphicon glyphicon-unchecked checkIcon", "aria-hidden": "true" });
+	        }
+	    }, {
+	        key: "renderTaskSection",
+	        value: function renderTaskSection() {
+	            var _props2 = this.props;
+	            var task = _props2.task;
+	            var isCompleted = _props2.isCompleted;
+
 	            var taskStyle = {
-	                color: isCompleted ? 'green' : 'red',
+	                color: isCompleted ? '#bcbcbc' : '#666666',
 	                cursor: 'pointer'
 	            };
 
 	            if (this.state.isEditing) {
-	                return _react2.default.createElement('div', null, _react2.default.createElement('form', { onSubmit: this.onSaveClick.bind(this) }, _react2.default.createElement('input', { type: 'text', defaultValue: task, ref: 'editInput' })));
+	                return _react2.default.createElement("div", { className: "taskText" }, _react2.default.createElement("form", { onSubmit: this.onSaveClick.bind(this) }, _react2.default.createElement("input", { className: "form-control txtEdit", type: "text", defaultValue: task, ref: "editInput" })));
 	            }
 
-	            return _react2.default.createElement('div', {
+	            return _react2.default.createElement("span", {
+	                className: "taskText",
 	                style: taskStyle,
 	                onClick: this.props.toggleTask.bind(this, task)
-	            }, task, _react2.default.createElement('br', null));
+	            }, task, _react2.default.createElement("br", null));
 	        }
 	    }, {
-	        key: 'renderActionsSection',
+	        key: "renderActionsSection",
 	        value: function renderActionsSection() {
 	            if (this.state.isEditing) {
-	                return _react2.default.createElement('div', null, _react2.default.createElement('button', { onClick: this.onSaveClick.bind(this) }), _react2.default.createElement('button', { onClick: this.onCancelClick.bind(this) }));
+	                return _react2.default.createElement("div", { className: "actions text-center" }, _react2.default.createElement("button", { className: "btnAction btnColorSave", onClick: this.onSaveClick.bind(this) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-ok-sign", "aria-hidden": "true" })), _react2.default.createElement("button", { className: "btnAction btnColorCancel", onClick: this.onCancelClick.bind(this) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-remove-sign", "aria-hidden": "true" })));
 	            }
 
-	            return _react2.default.createElement('div', { className: 'col-lg-2 taskRow' }, _react2.default.createElement('button', { onClick: this.onEditClick.bind(this) }), _react2.default.createElement('button', { onClick: this.props.deleteTask.bind(this, this.props.task) }));
+	            return _react2.default.createElement("div", { className: "actions text-center" }, _react2.default.createElement("button", { className: "btnAction", onClick: this.onEditClick.bind(this) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-edit", "aria-hidden": "true" })), _react2.default.createElement("button", { className: "btnAction", onClick: this.props.deleteTask.bind(this, this.props.task) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-trash", "aria-hidden": "true" })));
 	        }
 	    }, {
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
-	            return _react2.default.createElement('div', null, this.renderTaskSection(), this.renderActionsSection());
+	            return _react2.default.createElement("div", { className: "todoAppTask" }, _react2.default.createElement("div", { className: "check text-center" }, this.renderCheckedSection()), this.renderActionsSection(), this.renderTaskSection());
 	        }
 	    }, {
-	        key: 'onEditClick',
+	        key: "onEditClick",
 	        value: function onEditClick() {
 	            this.setState({ isEditing: true });
 	        }
 	    }, {
-	        key: 'onCancelClick',
+	        key: "onCancelClick",
 	        value: function onCancelClick() {
 	            this.setState({ isEditing: false });
 	        }
 	    }, {
-	        key: 'onSaveClick',
+	        key: "onSaveClick",
 	        value: function onSaveClick(event) {
 	            event.preventDefault();
 
@@ -15163,11 +15177,21 @@
 	                        "Made with ♥ by ",
 	                        _react2.default.createElement(
 	                            "a",
-	                            { href: "" },
+	                            { href: "http://twitter.com/ilove_chowking" },
 	                            _react2.default.createElement(
 	                                "strong",
 	                                null,
-	                                "@reyesreg"
+	                                "@ilove_chowking"
+	                            )
+	                        ),
+	                        " and a little help from ",
+	                        _react2.default.createElement(
+	                            "a",
+	                            { href: "http://twitter.com/XValhallaCoderX" },
+	                            _react2.default.createElement(
+	                                "strong",
+	                                null,
+	                                "@XValhallaCoderX"
 	                            )
 	                        ),
 	                        "."
