@@ -4,16 +4,16 @@
   "description": "Simple to-do app using React powered by Google Spreadsheets.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "webpack-dev-server --inline --hot",
     "postinstall": "webpack -p --config webpack.prod.config.js"
   },
   "dependencies": {
+    "css-loader": "^0.23.1",
     "express": "^4.14.0",
     "lodash": "^4.14.2",
+    "node-sass": "^3.8.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "css-loader": "^0.23.1",
-    "node-sass": "^3.4.2",
     "react-router": "^2.6.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
@@ -29,9 +29,6 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Reg Reyes",
   "license": "ISC"

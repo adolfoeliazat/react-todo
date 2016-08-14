@@ -18,13 +18,13 @@ export default class CreateTodo extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleCreate.bind(this)}>
-                <div className="col-lg-6">
-                    <input type="text" placeholder="Lez do thiz" ref="createInput" className="form-control"/>
+                <div className="todoAppTitle">
+                    <h2>Be Awesome Today</h2>
                 </div>
-                <div className="col-lg-6">
-                    <button className="btn btn-success">Save</button>
+                <div className="todoAppTask form-inline">
+                    <input type="text" className="form-control inputText" placeholder="Save the world" ref="createInput"/>
+                    <button className="btnSave"><span className="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                 </div>
-                <br/><br/><br/>
                 {this.renderError()}
             </form>
         );

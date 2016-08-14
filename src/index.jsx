@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import CreateTodo from './components/create-todo.js';
 import TodosList from './components/todos-list.js';
 
+import './styles/myStyle.scss';
+
 import { Route, Router, ReactRouter, RouteHandler, DefaultRoute, State, IndexRoute, IndexLink, Link, Redirect } from 'react-router';
 
 function loadJSON()
@@ -12,7 +14,7 @@ function loadJSON()
     var data;
     var arr = [];
 
-    xhr.onreadystatechange = function()
+    xhr.onreadystatechange = function ()
     {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
@@ -54,21 +56,24 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <div className="jumbotron">
-                    <h1>React To Do</h1>
-                    <p>This is a simple to-do list app that uses Google Sheets as its backend database.
-                    <br/>Made by <strong>@reyesreg</strong></p>
+                <div className="container-fluid titleDiv">
+                    <h1>Simple To Do App</h1>
+                    <p>This is a simple to-do list app powered by React and Google Spreadsheets.
+                        <br/>Made with &hearts; by <a href="http://twitter.com/ilove_chowking"><strong>@ilove_chowking</strong></a> and a little help from <a href="http://twitter.com/XValhallaCoderX"><strong>@XValhallaCoderX</strong></a>.
+                    </p>
                 </div>
-                <CreateTodo 
-                    todos={this.state.todos}
-                    createTask={this.createTask.bind(this)}
-                />
-                <TodosList
-                    todos={this.state.todos}
-                    toggleTask={this.toggleTask.bind(this)}
-                    saveTask={this.saveTask.bind(this)}
-                    deleteTask={this.deleteTask.bind(this)}
-                />
+                <div className="todoDiv">
+                    <CreateTodo 
+                        todos={this.state.todos}
+                        createTask={this.createTask.bind(this)}
+                    />
+                    <TodosList
+                        todos={this.state.todos}
+                        toggleTask={this.toggleTask.bind(this)}
+                        saveTask={this.saveTask.bind(this)}
+                        deleteTask={this.deleteTask.bind(this)}
+                    />
+                </div>
             </div>
         );
     }

@@ -9,58 +9,76 @@ export default class TodosListItem extends React.Component {
         };
     }
 
+    renderCheckedSection() {
+        const { task, isCompleted } = this.props;
+
+        if(isCompleted) {
+            return (
+                <span className="glyphicon glyphicon-ok checkIcon" aria-hidden="true"></span>
+            );
+        }
+
+        return (
+            <span className="glyphicon glyphicon-unchecked checkIcon" aria-hidden="true"></span>
+        );
+    }
+
     renderTaskSection() {
         const { task, isCompleted } = this.props;
 
         const taskStyle = {
-            color: isCompleted? 'green' : 'red',
+            color: isCompleted? '#bcbcbc' : '#666666',
             cursor: 'pointer'
         };
 
         if(this.state.isEditing) {
             return (
-                <div className="col-lg-6">
+                <div className="taskText">
                     <form onSubmit={this.onSaveClick.bind(this)}>
-                        <input type="text" defaultValue={task} ref="editInput"/>
+                        <input className="form-control txtEdit" type="text" defaultValue={task} ref="editInput"/>
                     </form>
                 </div>
             );
         }
 
         return (
-            <div className="col-lg-6"
+            <span
+                className="taskText"
                 style={taskStyle}
                 onClick={this.props.toggleTask.bind(this, task)}
             >
                 {task}
                 <br/>
-            </div>
+            </span>
         );
     }
 
     renderActionsSection() {
         if(this.state.isEditing) {
             return (
-                <div className="col-lg-6">
-                    <button className="btn btn-success glyphicon glyphicon-ok-sign" onClick={this.onSaveClick.bind(this)}></button>
-                    <button className="btn btn-warning glyphicon glyphicon-remove-sign" onClick={this.onCancelClick.bind(this)}></button>
+                <div className="actions text-center">
+                    <button className="btnAction btnColorSave" onClick={this.onSaveClick.bind(this)}><span className="glyphicon glyphicon-ok-sign" aria-hidden="true"></span></button>
+                    <button className="btnAction btnColorCancel" onClick={this.onCancelClick.bind(this)}><span className="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
                 </div>
             );
         }
 
         return (
-            <div className="col-lg-6">
-                <button className="btn btn-primary glyphicon glyphicon-edit" onClick={this.onEditClick.bind(this)}></button>
-                <button className="btn btn-danger glyphicon glyphicon-trash" onClick={this.props.deleteTask.bind(this, this.props.task)}></button>
+            <div className="actions text-center">
+                <button className="btnAction" onClick={this.onEditClick.bind(this)}><span className="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+                <button className="btnAction" onClick={this.props.deleteTask.bind(this, this.props.task)}><span className="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
             </div>
         );
     }
     
     render() {
         return (
-            <div className="taskRow">
-                {this.renderTaskSection()}
+            <div className="todoAppTask">
+                <div className="check text-center">
+                    {this.renderCheckedSection()}
+                </div>
                 {this.renderActionsSection()}
+                {this.renderTaskSection()}
             </div>
         );
     }
