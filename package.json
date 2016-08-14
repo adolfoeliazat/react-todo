@@ -4,7 +4,8 @@
   "description": "Simple to-do app using React powered by Google Spreadsheets.",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot",
+    "dev": "webpack-dev-server --inline --hot",
+    "start": "node server.js",
     "postinstall": "webpack -p --config webpack.prod.config.js"
   },
   "dependencies": {
