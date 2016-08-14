@@ -65,8 +65,8 @@ export default class TodosListItem extends React.Component {
 
         return (
             <div className="actions text-center">
-                <button className="btnAction" onClick={this.onEditClick.bind(this)}><span className="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
-                <button className="btnAction" onClick={this.props.deleteTask.bind(this, this.props.task)}><span className="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                <button className="btnEdit btnAction" onClick={this.onEditClick.bind(this)}><span className="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+                <button className="btnTrash btnAction" onClick={this.props.deleteTask.bind(this, this.props.task)}><span className="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
             </div>
         );
     }
