@@ -6,7 +6,7 @@ html, body {
     padding-bottom: 50px;
 }
 
-a, h1 {
+a, h1, .btnColorCancel, .btnTrash:hover {
     color: #db6969;
 }
 
@@ -101,10 +101,6 @@ h1, h2 {
 
 .btnColorSave, .btnEdit:hover {
     color: #3498db;
-}
-
-.btnColorCancel, .btnTrash:hover {
-    color: #db6969;
 }
 
 .txtEdit {
