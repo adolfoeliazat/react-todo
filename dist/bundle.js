@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f292e09f6e53f32e1d3f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "781edafb78a76f10b024"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -6095,7 +6095,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  background-color: #34495e;\n  font-family: 'Roboto', sans-serif;\n  font-size: 20px;\n  min-height: 100%;\n  padding-bottom: 50px; }\n\na, h1 {\n  color: #db6969; }\n\nh1, h2 {\n  font-family: 'Roboto Slab', serif; }\n\n.container {\n  height: 100%; }\n\n.titleDiv {\n  background-color: #ecf0f1;\n  padding: 2% 10% 3% 10%;\n  border-radius: 0 0 10px 10px; }\n\n.todoDiv {\n  margin: 0 auto;\n  margin-top: 5%;\n  width: 600px; }\n\n.inputText {\n  width: 500px !important;\n  margin-left: 15px;\n  font-size: 20px;\n  padding: 0px;\n  padding-left: 10px;\n  border-radius: 0px;\n  margin-top: -3px; }\n\n.btnSave {\n  background: none;\n  border: 0;\n  margin-left: 20px;\n  padding: 0;\n  margin-top: 5px;\n  color: #1abc9c; }\n\n.todoAppTitle {\n  background-color: #1abc9c;\n  border-radius: 10px 10px 0 0;\n  padding: 10px;\n  text-align: center;\n  color: #34495e; }\n\n.todoAppTask {\n  background-color: #ecf0f1;\n  padding: 20px;\n  border-bottom: 1px solid #e0e0e0;\n  position: relative;\n  color: #666666; }\n\n.actions {\n  position: absolute;\n  right: 0;\n  height: 100%;\n  margin-top: -20px;\n  border-left: 1px solid #e0e0e0;\n  width: 100px; }\n\n.check {\n  position: absolute;\n  left: 0;\n  height: 100%;\n  margin-top: -20px;\n  width: 80px;\n  border-right: 1px solid #e0e0e0;\n  padding-top: 20px;\n  color: #3498db; }\n\n.btnAction {\n  color: #bcbcbc;\n  margin-top: 23px;\n  margin-left: 6px;\n  margin-right: 6px;\n  padding: 0;\n  background: none;\n  border: 0; }\n\n.taskText {\n  padding-left: 80px; }\n\n.btnColorSave {\n  color: #3498db; }\n\n.btnColorCancel {\n  color: #db6969; }\n\n.txtEdit {\n  width: 380px;\n  font-size: 20px;\n  padding: 0px;\n  padding-left: 10px;\n  border-radius: 0px;\n  margin-top: -3px; }\n", ""]);
+	exports.push([module.id, "html, body {\n  background-color: #34495e;\n  font-family: 'Roboto', sans-serif;\n  font-size: 20px;\n  min-height: 100%;\n  padding-bottom: 50px; }\n\na, h1, .btnColorCancel, .btnTrash:hover {\n  color: #db6969; }\n\nh1, h2 {\n  font-family: 'Roboto Slab', serif; }\n\n.container {\n  height: 100%; }\n\n.titleDiv {\n  background-color: #ecf0f1;\n  padding: 2% 10% 3% 10%;\n  border-radius: 0 0 10px 10px; }\n\n.todoDiv {\n  margin: 0 auto;\n  margin-top: 5%;\n  width: 600px; }\n\n.inputText {\n  width: 500px !important;\n  margin-left: 15px;\n  font-size: 20px;\n  padding: 0px;\n  padding-left: 10px;\n  border-radius: 0px;\n  margin-top: -3px; }\n\n.btnSave {\n  background: none;\n  border: 0;\n  margin-left: 20px;\n  padding: 0;\n  margin-top: 5px;\n  color: #1abc9c; }\n\n.todoAppTitle {\n  background-color: #1abc9c;\n  border-radius: 10px 10px 0 0;\n  padding: 10px;\n  text-align: center;\n  color: #34495e; }\n\n.todoAppTask {\n  background-color: #ecf0f1;\n  padding: 20px;\n  border-bottom: 1px solid #e0e0e0;\n  position: relative;\n  color: #666666; }\n\n.actions {\n  position: absolute;\n  right: 0;\n  height: 100%;\n  margin-top: -20px;\n  border-left: 1px solid #e0e0e0;\n  width: 100px; }\n\n.check {\n  position: absolute;\n  left: 0;\n  height: 100%;\n  margin-top: -20px;\n  width: 80px;\n  border-right: 1px solid #e0e0e0;\n  padding-top: 20px;\n  color: #3498db; }\n\n.btnAction {\n  color: #bcbcbc;\n  margin-top: 23px;\n  margin-left: 6px;\n  margin-right: 6px;\n  padding: 0;\n  background: none;\n  border: 0; }\n\n.taskText {\n  padding-left: 80px; }\n\n.btnColorSave, .btnEdit:hover {\n  color: #3498db; }\n\n.txtEdit {\n  width: 380px;\n  font-size: 20px;\n  padding: 0px;\n  padding-left: 10px;\n  border-radius: 0px;\n  margin-top: -3px; }\n\n.checkIcon {\n  cursor: pointer; }\n", ""]);
 
 	// exports
 
@@ -14893,10 +14893,10 @@
 	            var isCompleted = _props.isCompleted;
 
 	            if (isCompleted) {
-	                return _react2.default.createElement("span", { className: "glyphicon glyphicon-ok checkIcon", "aria-hidden": "true" });
+	                return _react2.default.createElement("span", { onClick: this.props.toggleTask.bind(this, task), className: "glyphicon glyphicon-ok checkIcon", "aria-hidden": "true" });
 	            }
 
-	            return _react2.default.createElement("span", { className: "glyphicon glyphicon-unchecked checkIcon", "aria-hidden": "true" });
+	            return _react2.default.createElement("span", { onClick: this.props.toggleTask.bind(this, task), className: "glyphicon glyphicon-unchecked checkIcon", "aria-hidden": "true" });
 	        }
 	    }, {
 	        key: "renderTaskSection",
@@ -14927,7 +14927,7 @@
 	                return _react2.default.createElement("div", { className: "actions text-center" }, _react2.default.createElement("button", { className: "btnAction btnColorSave", onClick: this.onSaveClick.bind(this) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-ok-sign", "aria-hidden": "true" })), _react2.default.createElement("button", { className: "btnAction btnColorCancel", onClick: this.onCancelClick.bind(this) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-remove-sign", "aria-hidden": "true" })));
 	            }
 
-	            return _react2.default.createElement("div", { className: "actions text-center" }, _react2.default.createElement("button", { className: "btnAction", onClick: this.onEditClick.bind(this) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-edit", "aria-hidden": "true" })), _react2.default.createElement("button", { className: "btnAction", onClick: this.props.deleteTask.bind(this, this.props.task) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-trash", "aria-hidden": "true" })));
+	            return _react2.default.createElement("div", { className: "actions text-center" }, _react2.default.createElement("button", { className: "btnEdit btnAction", onClick: this.onEditClick.bind(this) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-edit", "aria-hidden": "true" })), _react2.default.createElement("button", { className: "btnTrash btnAction", onClick: this.props.deleteTask.bind(this, this.props.task) }, _react2.default.createElement("span", { className: "glyphicon glyphicon-trash", "aria-hidden": "true" })));
 	        }
 	    }, {
 	        key: "render",
