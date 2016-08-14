@@ -14,12 +14,12 @@ export default class TodosListItem extends React.Component {
 
         if(isCompleted) {
             return (
-                <span className="glyphicon glyphicon-ok checkIcon" aria-hidden="true"></span>
+                <span onClick={this.props.toggleTask.bind(this, task)} className="glyphicon glyphicon-ok checkIcon" aria-hidden="true"></span>
             );
         }
 
         return (
-            <span className="glyphicon glyphicon-unchecked checkIcon" aria-hidden="true"></span>
+            <span onClick={this.props.toggleTask.bind(this, task)} className="glyphicon glyphicon-unchecked checkIcon" aria-hidden="true"></span>
         );
     }
 
